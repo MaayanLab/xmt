@@ -37,12 +37,12 @@ whole blood (UBERON:0001012)		FAH	LIFR	STAT2	STAT3
 
 ### Installation
 ```
-pip install 'xmt[pandas]'
+pip install 'cfde-xmt[pandas]'
 ```
 
 ### Usage
 ```python
-import xmt
+import cfde_xmt as xmt
 data = xmt.from_file('example/simple.xmt')
 #data = xmt.from_file('example/legacy.gmt') # also works with .gmt
 
@@ -66,7 +66,7 @@ new_data.to_file('output.xmt')
 
 ### Installation
 ```
-pip install 'xmt[pandas,cli]'
+pip install 'cfde-xmt[pandas,cli]'
 ```
 
 ### Usage
