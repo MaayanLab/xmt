@@ -61,3 +61,20 @@ new_data = xmt.DenseXMT(xmt.Frontmatter(
 new_data.append(term, description, entity_list)
 new_data.to_file('output.xmt')
 ```
+
+## Using the CLI
+
+### Installation
+```
+pip install 'xmt[pandas,cli]'
+```
+
+### Usage
+```bash
+# initial convertion of gmt to xmt (should still update frontmatter)
+xmt convert -i example/legacy.gmt -o output.xmt
+
+# convert to other formats for ease of access in other programming languages
+uv run xmt convert -i example/simple.xmt -o output.json
+uv run xmt convert -i example/simple.xmt -o output.tsv
+```

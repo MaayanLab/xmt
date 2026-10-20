@@ -11,6 +11,9 @@ dependencies = [
     "ruamel-yaml>=0.19.1",
 ]
 
+[project.scripts]
+xmt = "xmt.__main__:cli"
+
 [project.optional-dependencies]
 sparse = [
     "numpy>=2.5.4",
@@ -20,6 +23,9 @@ pandas = [
     "numpy>=2.5.4",
     "pandas>=3.0.6",
     "scipy>=1.18.1",
+]
+cli = [
+    "click>=8.5.0",
 ]
 
 [build-system]
