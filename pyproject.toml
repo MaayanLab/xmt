@@ -1,0 +1,27 @@
+[project]
+name = "xmt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Daniel J. B. Clarke", email = "danieljbclarkemssm@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "ruamel-yaml>=0.19.1",
+]
+
+[project.optional-dependencies]
+sparse = [
+    "numpy>=2.5.4",
+    "scipy>=1.18.1",
+]
+pandas = [
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "scipy>=1.18.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"

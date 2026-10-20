@@ -32,3 +32,32 @@ source: "https://github.com/… or https://doi.org/…"
 adipose (UBERON:0001013)		FAH	LIFR	H2AFJ	NAGLU	ACE2
 whole blood (UBERON:0001012)		FAH	LIFR	STAT2	STAT3
 ```
+
+## Using this library
+
+### Installation
+```
+pip install 'xmt[pandas]'
+```
+
+### Usage
+```python
+import xmt
+data = xmt.from_file('example/simple.xmt')
+#data = xmt.from_file('example/legacy.gmt') # also works with .gmt
+
+# load the xmt as a sparse pandas dataframe
+data.to_pandas()
+
+# by default, XMTs are lazy loaded, to_dense loads it into memory for faster manipulation
+data = data.to_dense()
+
+# also possible to create a new XMT
+new_data = xmt.DenseXMT(xmt.Frontmatter(
+  term='perturbation',
+  entity='hgnc.symbol',
+  source='https://maayanlab.cloud/sigcom-lincs/#/Download'
+))
+new_data.append(term, description, entity_list)
+new_data.to_file('output.xmt')
+```

@@ -1,0 +1,21 @@
+---
+# the xmt file format version
+version: "1.0"
+# a description of what the terms/set label represent
+term: "anatomy"
+# compact IRI prefix to combine with the entities/set elements
+entity: "ncbigene:"
+# if `true` the ordering of the entities in the row is from most significant to least significant
+ordered: false
+# a template that can be used to construct a human readable assertion about
+#  the relationship between the term and the entity being captured in this XMT
+# NOTE: {entity} and {term} are used literally, not as a substitution
+label: "{entity} is upregulated in {term}"
+# a link to a repository/source/description of how this was generated
+source: "https://github.com/… or https://doi.org/…"
+
+# all lines after the close fence (---) are of the form:
+# term	description	list of entities separated by tabs
+---
+adipose (UBERON:0001013)		FAH	LIFR	H2AFJ	NAGLU	ACE2
+whole blood (UBERON:0001012)		FAH	LIFR	STAT2	STAT3
