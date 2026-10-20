@@ -42,7 +42,7 @@ pip install 'cfde-xmt[pandas]'
 
 ### Usage
 ```python
-import cfde_xmt as xmt
+import xmt
 data = xmt.from_file('example/simple.xmt')
 #data = xmt.from_file('example/legacy.gmt') # also works with .gmt
 
